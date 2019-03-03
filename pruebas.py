@@ -1,3 +1,5 @@
+
+
 def maxi(*l):
     if len(l) == 0:
         return 0
@@ -23,5 +25,14 @@ def media(*l):
     for valor in l:
         sumas += valor
     return (sumas / len(l))
-
+funciones = {"max":maxi,
+             "min":mini,
+             "media":media}
+def returnf(nombre):
+    if nombre in funciones.keys():
+        return funciones[nombre]
+        
+    return None
 print(media(4, 999, 6, 23, 4, 5))
+
+returnf(media)
